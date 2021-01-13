@@ -72,11 +72,9 @@ Acionamento de um alarme(Buzzer) ao apertar um botão.
 
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
-Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessário para o uso dos elementos do projeto, artimanhas utilizadas no código e afins.
-
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
-    <p>Figura 3. Projeto em funcionamento</p>
+    <img src="https://media.giphy.com/media/c0MWabFTlXkE9SZaD0/giphy.gif"></img>
+    <p>Figura 2. Projeto em funcionamento</p>
 </div>
 
 O código a seguir realiza as funções designadas para o projeto:
