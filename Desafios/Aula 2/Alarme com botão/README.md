@@ -21,7 +21,7 @@ Acionamento de um alarme(Buzzer) ao apertar um botão.
 
 
 <div align='center'>
-    <img src="https://github.com/rayque-alencar/RAS1/blob/main/aula%201/Circuito.png"></igm>
+    <img src="https://github.com/rayque-alencar/desafios/blob/main/Desafios/Aula%202/Alarme%20com%20botão/Circuito.jpg"></igm>
     <p align='center'>Figura 1</p>
 </div>
 
