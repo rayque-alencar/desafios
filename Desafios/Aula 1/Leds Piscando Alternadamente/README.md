@@ -56,6 +56,10 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
     </tr>
     <td>1&nbsp;</td>
     <td>Led azul</td>
+    <tr>
+    <td>1&nbsp;</td>
+    <td>
+    <p>Protoboard</p>
     </tbody>
     </table>
 
@@ -71,7 +75,7 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
 Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessário para o uso dos elementos do projeto, artimanhas utilizadas no código e afins.
 
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
+    <img src="https://media.giphy.com/media/TJUopNPhqukspIVJTe/giphy.gif"></img>
     <p>Figura 3. Projeto em funcionamento</p>
 </div>
 
