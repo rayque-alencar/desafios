@@ -81,7 +81,7 @@ Ultilizando leds faça com que eles fiquem piscando alternadamente, aumentando a
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
 <div align='center'>
-    <img src="https://media.giphy.com/media/TJUopNPhqukspIVJTe/giphy.gif"></img>
+    <img src="https://media.giphy.com/media/CWcjYWcoIEhJq6lepB/giphy.gif"></img>
     <p>Figura 3. Projeto em funcionamento</p>
 </div>
 
