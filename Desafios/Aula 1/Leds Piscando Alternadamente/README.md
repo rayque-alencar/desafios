@@ -76,7 +76,7 @@ Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessá
 
 <div align='center'>
     <img src="https://media.giphy.com/media/TJUopNPhqukspIVJTe/giphy.gif"></img>
-    <p>Figura 3. Projeto em funcionamento</p>
+    <p>Figura 2. Projeto em funcionamento</p>
 </div>
 
 O código a seguir realiza as funções designadas para o projeto:
