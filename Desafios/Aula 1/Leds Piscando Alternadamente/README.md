@@ -1,4 +1,4 @@
-# Desafio da aula 1
+# Desafio 1 da aula 1
 
 ## Índice
 + [Circuito](#circuito)
