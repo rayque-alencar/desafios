@@ -1,4 +1,4 @@
-# Desafio da aula 1
+# Desafio 2 da aula 2
 
 ## Índice
 + [Circuito](#circuito)
@@ -11,7 +11,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada. Com tempos de duração entre ligado e desligado diferentes.
+Ultilizando leds faça com que eles fiquem piscando alternadamente, aumentando a velocidade de piscada ou diminuindo para cada click no botão.
 
 
 ---
@@ -21,7 +21,7 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
 
 
 <div align='center'>
-    <img src="https://github.com/rayque-alencar/RAS1/blob/main/aula%201/Circuito.png"></igm>
+    <img src="https://github.com/rayque-alencar/desafios/blob/main/Desafios/Aula%202/Leds%20piscando%20alternadamente%20(aumentando%20ou%20diminuindo%20a%20velocidade)/Circuito.jpg"></igm>
     <p align='center'>Figura 1</p>
 </div>
 
@@ -42,20 +42,32 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
     </tr>
     <tr>
     <td>2</td>
-    <td>Resistor 330&Omega;</td>
-    </tr>
-    <tr>
-    <td>7&nbsp;</td>
-    <td>
-    <p>Jumper Macho-Macho</p>
-    </td>
+    <td>Resistores de 330&Omega;</td>
     </tr>
     <tr>
     <td>1&nbsp;</td>
-    <td>Led vermelho</td>
+    <td>Resistor de 1K&Omega;</td>
     </tr>
+    <tr>
     <td>1&nbsp;</td>
     <td>Led azul</td>
+    </tr>
+    <tr>
+    <td>1&nbsp;</td>
+    <td>
+    <p>Led amarelo</p>
+    </td>
+    <tr>
+    <td>1&nbsp;</td>
+    <td>Botao</td>
+    </tr>
+    <td>7&nbsp;</td>
+    <td>
+    <p>Jumpers Macho-Macho</p>
+    </td>
+    </tr>
+    <td>1&nbsp;</td>
+    <td>Protoboard</td>
     </tbody>
     </table>
 
@@ -68,8 +80,6 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
 
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
-Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessário para o uso dos elementos do projeto, artimanhas utilizadas no código e afins.
-
 <div align='center'>
     <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
     <p>Figura 3. Projeto em funcionamento</p>
@@ -78,24 +88,43 @@ Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessá
 O código a seguir realiza as funções designadas para o projeto:
 
 ```cpp
-#define ledRed 13 // Define led vermelho no pino 13
-#define ledBlue 8 // Define led azul no pino 8
+// definicao das constantes das portas
+#define ledYellow 11
+#define ledBlue 8
+#define buttom 13
+
+int speed = 1000;                  // variavel do tempo do delay
+int buttomStatus = 0;              // bool da ativacao do botao
+
+// funcao de analise do botao e realizacao de acao
+void analise()                     
+{
+  buttomStatus = digitalRead(buttom);         // variavel recebe se o botao foi pressionado
+  if(buttomStatus && speed > 100){            // caso tenha sido pressionado e a velocidade seja maior que 100
+    speed -= 100;                             // tempo diminui em 0.1 seg
+  }
+}
 
 void setup()
 {
-pinMode(ledRed, OUTPUT);      // Saída de sinal digital
-pinMode(ledBlue, OUTPUT);     // Saída de sinal digital
+  // inicia os leds
+  pinMode(ledBlue, OUTPUT);
+  pinMode(ledYellow, OUTPUT);
 }
 
-// Função loop() executa inifitamente
 void loop()
 {
-digitalWrite(ledRed, HIGH);      // Acende o Led vermelho
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledRed, LOW);       // Desliga o Led vermelho
-digitalWrite(ledBlue, HIGH);     // Acende o Led azul
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledBlue, LOW);      // Desliga o Led azul 
+  digitalWrite(ledYellow, HIGH);              // led amarelo acende
+  digitalWrite(ledBlue, LOW);                 // led azul apaga
+  analise();                                  // chamada da funcao analise
+  
+  delay(speed);                               // delay com o valor de speed
+  
+  digitalWrite(ledYellow, LOW);               // led amarelo apaga
+  digitalWrite(ledBlue, HIGH);                // led azul acende
+  analise();                                  // chamada da funcao analise
+   
+  delay(speed);                               // delay com o valor de speed
 }
 ```
 
