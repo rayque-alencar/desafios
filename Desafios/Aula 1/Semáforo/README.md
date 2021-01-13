@@ -71,12 +71,11 @@ Ultilizando tres led um vermelho, um amarelo e um verde, faça um semáforo.
 
 ---
 
-
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
-    <p>Figura 3. Projeto em funcionamento</p>
+    <img src="https://media.giphy.com/media/yUn6htyvcajHpRKydd/giphy.gif"></img>
+    <p>Figura 2. Projeto em funcionamento</p>
 </div>
 
 O código a seguir realiza as funções designadas para o projeto:
