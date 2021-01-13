@@ -59,7 +59,7 @@ Ultilizando leds faça com que eles fiquem piscando alternadamente, aumentando a
     </td>
     <tr>
     <td>1&nbsp;</td>
-    <td>Botao</td>
+    <td>Botão</td>
     </tr>
     <td>7&nbsp;</td>
     <td>
@@ -81,7 +81,7 @@ Ultilizando leds faça com que eles fiquem piscando alternadamente, aumentando a
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
+    <img src="https://media.giphy.com/media/TJUopNPhqukspIVJTe/giphy.gif"></img>
     <p>Figura 3. Projeto em funcionamento</p>
 </div>
 
