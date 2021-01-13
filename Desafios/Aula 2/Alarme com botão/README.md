@@ -42,7 +42,7 @@ Acionamento de um alarme(Buzzer) ao apertar um botão.
     </tr>
     <tr>
     <td>2</td>
-    <td>Resistor 1K&Omega;</td>
+    <td>resistores de 1K&Omega;</td>
     </tr>
     <tr>
     <td>6&nbsp;</td>
