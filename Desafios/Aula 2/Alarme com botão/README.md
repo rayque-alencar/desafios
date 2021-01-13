@@ -1,4 +1,4 @@
-# Desafio da aula 1
+# Desafio 1 da aula 2
 
 ## Índice
 + [Circuito](#circuito)
@@ -11,7 +11,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada. Com tempos de duração entre ligado e desligado diferentes.
+Acionamento de um alarme(Buzzer) ao apertar um botão.
 
 
 ---
@@ -42,20 +42,24 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
     </tr>
     <tr>
     <td>2</td>
-    <td>Resistor 330&Omega;</td>
+    <td>Resistor 1K&Omega;</td>
     </tr>
     <tr>
-    <td>7&nbsp;</td>
+    <td>6&nbsp;</td>
     <td>
     <p>Jumper Macho-Macho</p>
     </td>
     </tr>
     <tr>
     <td>1&nbsp;</td>
-    <td>Led vermelho</td>
+    <td>Botão</td>
+    </tr>
+    <tr>
+    <td>1&nbsp;</td>
+    <td>Buzzer</td>
     </tr>
     <td>1&nbsp;</td>
-    <td>Led azul</td>
+    <td>Protoboard</td>
     </tbody>
     </table>
 
@@ -78,24 +82,25 @@ Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessá
 O código a seguir realiza as funções designadas para o projeto:
 
 ```cpp
-#define ledRed 13 // Define led vermelho no pino 13
-#define ledBlue 8 // Define led azul no pino 8
+#define buttonPin 2       // define o botão na porta 2
+#define buzzer 13         // define o buzzer na porta 13
+int buttonStatus = 0;     // variavel bool para saber se o botão foi pressionado
 
 void setup()
 {
-pinMode(ledRed, OUTPUT);      // Saída de sinal digital
-pinMode(ledBlue, OUTPUT);     // Saída de sinal digital
+  pinMode(buzzer, OUTPUT);        // Inicia buzzer
+  pinMode(buttonPin, INPUT);      // Inicia botão
 }
 
-// Função loop() executa inifitamente
 void loop()
 {
-digitalWrite(ledRed, HIGH);      // Acende o Led vermelho
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledRed, LOW);       // Desliga o Led vermelho
-digitalWrite(ledBlue, HIGH);     // Acende o Led azul
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledBlue, LOW);      // Desliga o Led azul 
+  buttonStatus = digitalRead(buttonPin);       // buttomStatus recebe se o botão foi apertado
+  if(buttonStatus == HIGH){                    // se tiver apertado
+    tone(buzzer, 265);                         // liga o buzzer com frequencia 265
+  }
+  else{                                        // caso não tiver apertado
+    noTone(buzzer);                            // desliga o buzzer
+  }
 }
 ```
 
