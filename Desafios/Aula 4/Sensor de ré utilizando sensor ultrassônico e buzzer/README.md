@@ -1,4 +1,4 @@
-# Desafio da aula 1
+# Desafio 1 da aula 4
 
 ## Índice
 + [Circuito](#circuito)
@@ -11,17 +11,15 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada. Com tempos de duração entre ligado e desligado diferentes.
-
+Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuario mandar, através do Monitor Serial.
 
 ---
 
 <h2 id="Circuito">Circuito</h2>
 
 
-
 <div align='center'>
-    <img src="https://github.com/rayque-alencar/RAS1/blob/main/aula%201/Circuito.png"></igm>
+    <img src="https://github.com/rayque-alencar/desafios/blob/main/Desafios/Aula%204/Ligar%20ou%20Desligar%20o%20led%20de%20acordo%20com%20a%20luminosidade%20e%20utilizando%20LDR/Circuito.png"></igm>
     <p align='center'>Figura 1</p>
 </div>
 
@@ -41,21 +39,29 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
     <td>Arduino Uno</td>
     </tr>
     <tr>
-    <td>2</td>
+    <td>1</td>
     <td>Resistor 330&Omega;</td>
     </tr>
     <tr>
-    <td>7&nbsp;</td>
+    <tr>
+    <td>1</td>
+    <td>Resistor 1k&Omega;</td>
+    </tr>
+    <tr>
+    <td>9&nbsp;</td>
     <td>
     <p>Jumper Macho-Macho</p>
     </td>
     </tr>
     <tr>
     <td>1&nbsp;</td>
-    <td>Led vermelho</td>
+    <td>Led azul</td>
     </tr>
     <td>1&nbsp;</td>
-    <td>Led azul</td>
+    <td>Fotorresistor</td>
+    </tr>
+    <td>1&nbsp;</td>
+    <td>Protoboard</td>
     </tbody>
     </table>
 
@@ -68,37 +74,40 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
 
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
-Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessário para o uso dos elementos do projeto, artimanhas utilizadas no código e afins.
-
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
-    <p>Figura 3. Projeto em funcionamento</p>
+    <img src="https://media.giphy.com/media/zFpQ3R73me4QDL8UNe/giphy.gif"></img>
+    <p>Figura 2. Projeto em funcionamento</p>
 </div>
+
+
 
 O código a seguir realiza as funções designadas para o projeto:
 
 ```cpp
-#define ledRed 13 // Define led vermelho no pino 13
-#define ledBlue 8 // Define led azul no pino 8
+#define ledBlue 13    // define o led azul como 13
+#define ldr A5        // define o fotorresistor como A5
+
+int valor;            // variavel que recebe o valor de luminosidade
 
 void setup()
 {
-pinMode(ledRed, OUTPUT);      // Saída de sinal digital
-pinMode(ledBlue, OUTPUT);     // Saída de sinal digital
+  Serial.begin(9600);         // inicia porta serial
+  pinMode(ledBlue, OUTPUT);   // Inicia led azul
 }
 
-// Função loop() executa inifitamente
 void loop()
-{
-digitalWrite(ledRed, HIGH);      // Acende o Led vermelho
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledRed, LOW);       // Desliga o Led vermelho
-digitalWrite(ledBlue, HIGH);     // Acende o Led azul
-delay(500);                      // Paraliza o código 500 milissegundos
-digitalWrite(ledBlue, LOW);      // Desliga o Led azul 
+{ 
+ valor = analogRead(ldr);           // valor recebe o valor analogico do LDR
+  
+  if(valor >= 685){                 //se o valor for maior ou igual a 685
+   digitalWrite(ledBlue, HIGH);     // liga o led
+  }
+  else{                             // caso não
+    digitalWrite(ledBlue, LOW);     // desliga o led
+  }
+  
+  Serial.println(valor);            // printa o valor no monitor serial
+  delay(100);
+  
 }
 ```
-
-
-
-
