@@ -1,4 +1,4 @@
-# Desafio 1 da aula 4
+# Desafio 2 da aula 4
 
 ## Índice
 + [Circuito](#circuito)
@@ -11,7 +11,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuario mandar, através do Monitor Serial.
+Monte um sensor de ré ultilizando um sensor ultrassônico e um buzzer.
 
 ---
 
@@ -19,7 +19,7 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
 
 
 <div align='center'>
-    <img src="https://github.com/rayque-alencar/desafios/blob/main/Desafios/Aula%204/Ligar%20ou%20Desligar%20o%20led%20de%20acordo%20com%20a%20luminosidade%20e%20utilizando%20LDR/Circuito.png"></igm>
+    <img src="https://github.com/rayque-alencar/desafios/blob/main/Desafios/Aula%204/Sensor%20de%20ré%20utilizando%20sensor%20ultrassônico%20e%20buzzer/Circuito.png"></igm>
     <p align='center'>Figura 1</p>
 </div>
 
@@ -39,10 +39,6 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
     <td>Arduino Uno</td>
     </tr>
     <tr>
-    <td>1</td>
-    <td>Resistor 330&Omega;</td>
-    </tr>
-    <tr>
     <tr>
     <td>1</td>
     <td>Resistor 1k&Omega;</td>
@@ -53,12 +49,8 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
     <p>Jumper Macho-Macho</p>
     </td>
     </tr>
-    <tr>
     <td>1&nbsp;</td>
-    <td>Led azul</td>
-    </tr>
-    <td>1&nbsp;</td>
-    <td>Fotorresistor</td>
+    <td>Sensor ultrassonico</td>
     </tr>
     <td>1&nbsp;</td>
     <td>Protoboard</td>
@@ -71,11 +63,10 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
 
 ---
 
-
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
 <div align='center'>
-    <img src="https://media.giphy.com/media/zFpQ3R73me4QDL8UNe/giphy.gif"></img>
+    <img src="https://media.giphy.com/media/MG5e3NHGjiCdPuGfrs/giphy.gif"></img>
     <p>Figura 2. Projeto em funcionamento</p>
 </div>
 
@@ -84,30 +75,57 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
 O código a seguir realiza as funções designadas para o projeto:
 
 ```cpp
-#define ledBlue 13    // define o led azul como 13
-#define ldr A5        // define o fotorresistor como A5
+#define ultra_echo 11     // define o echo do ultrassonico como 11
+#define ultra_trig 12     // define o trig do ultrassonico como 12
+#define buzzer 10         // define o buzzer como 10
+float distanciaCm = 0;    // variavel que armazena a distancia
 
-int valor;            // variavel que recebe o valor de luminosidade
+// função para calcular a distância
+void calc_dist() 
+{
+  digitalWrite(ultra_trig, LOW);      // desliga o trig (por segurança)
+  delay(10);
+  
+  digitalWrite(ultra_trig, HIGH);     // liga o trig, emitindo o sinal
+  delayMicroseconds(10);              // delay de 10 microssegundos
+  digitalWrite(ultra_trig, LOW);      // desliga o trig, parando de emitir sinal
+  
+  float duracaoMili = pulseIn(ultra_echo, HIGH);    // Calcula o tempo desde a saida até o retorno do sinal do trig
+  
+  distanciaCm = duracaoMili/58;                     // transforma tempo em distancia em cm
+}
 
 void setup()
 {
-  Serial.begin(9600);         // inicia porta serial
-  pinMode(ledBlue, OUTPUT);   // Inicia led azul
+  Serial.begin(9600);            // inicia a porta serial
+  
+  pinMode(buzzer, OUTPUT);       // inicia o buzzer 
+  pinMode(ultra_trig, OUTPUT);   // inicia o trig do ultrassonico
+  pinMode(ultra_echo, INPUT);    // inicia o echo do ultrassonico
 }
 
 void loop()
-{ 
- valor = analogRead(ldr);           // valor recebe o valor analogico do LDR
+{
+  calc_dist(); // chama a função calc_dist
   
-  if(valor >= 685){                 //se o valor for maior ou igual a 685
-   digitalWrite(ledBlue, HIGH);     // liga o led
+  if(distanciaCm <= 100 && distanciaCm >= 50){     // se a distancia estiver entre 100 cm e 50 cm
+    tone(buzzer, 245);                             // buzzer toca uma nota de frequencia 245
+    delay(1000);                                   // espera de 1 segundo
+    noTone(buzzer);                                // buzzer para de tocar
+    delay(1000);                                   // espera de 1 segundo
   }
-  else{                             // caso não
-    digitalWrite(ledBlue, LOW);     // desliga o led
+  if(distanciaCm <= 50 && distanciaCm >= 25){      // se a distancia estiver entre 50 cm e 25 cm
+    tone(buzzer, 245);                             // buzzer toca uma nota de frequencia 245
+    delay(1000);                                   // espera de 1 segundo
+    noTone(buzzer);                                // buzzer para de tocar
+    delay(500);                                    // espera de meio segundo
   }
-  
-  Serial.println(valor);            // printa o valor no monitor serial
-  delay(100);
-  
+  if(distanciaCm <= 25){                           // se a distancia for menor que 25
+    tone(buzzer, 245);                             // toca sem parar na frequencia de 245
+  }
+  if(distanciaCm >= 100){                          // se a distancia for maior que 100cm
+    noTone(buzzer);                                //desliga o buzzer
+  }
+  delay(10);
 }
 ```
