@@ -52,6 +52,11 @@ Monte um sensor de ré ultilizando um sensor ultrassônico e um buzzer.
     <td>1&nbsp;</td>
     <td>Sensor ultrassonico</td>
     </tr>
+    </td>
+    </tr>
+    <td>1&nbsp;</td>
+    <td>Buzzer</td>
+    </tr>
     <td>1&nbsp;</td>
     <td>Protoboard</td>
     </tbody>
