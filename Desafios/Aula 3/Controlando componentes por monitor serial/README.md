@@ -39,21 +39,27 @@ Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuar
     <td>Arduino Uno</td>
     </tr>
     <tr>
-    <td>2</td>
+    <td>3</td>
     <td>Resistor 330&Omega;</td>
     </tr>
     <tr>
-    <td>7&nbsp;</td>
+    <td>10&nbsp;</td>
     <td>
     <p>Jumper Macho-Macho</p>
     </td>
     </tr>
     <tr>
     <td>1&nbsp;</td>
-    <td>Led vermelho</td>
+    <td>Led azul</td>
     </tr>
     <td>1&nbsp;</td>
-    <td>Led azul</td>
+    <td>Led amarelo</td>
+    </tr>
+    <td>1&nbsp;</td>
+    <td>Led verde</td>
+    </tr>
+    <td>1&nbsp;</td>
+    <td>Protoboard</td>
     </tbody>
     </table>
 
