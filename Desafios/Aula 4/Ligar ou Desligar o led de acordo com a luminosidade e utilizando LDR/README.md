@@ -11,7 +11,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Monte um programa que faça com que 2 ou mais leds pisquem apenas quando o usuario mandar, através do Monitor Serial.
+Ligar/Desligar o led de acordo com a luminosidade ultilizando o LDR.
 
 ---
 
