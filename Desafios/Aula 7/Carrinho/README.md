@@ -11,7 +11,7 @@
 
 <h2 id="objetivo">Objetivo</h2>
 
-Desenvolva um circuito que mostra a temperatura em tempo real no dislpay LCD, ultilizando 3 leds, crie um sistema para medir a temperatura: azul como baixa(temp <= 20), amarelo como média(20 > temp <= 50) e vermelho como alta(temp > 50), adicione um ventilador(motor) para ser ligado/desligado de acordo com a temperatura ambiente.
+Montar um carrinho robô utilizando os conteúdos adquiridos nas aulas passadas, Fazer o circuito de controle do carrinho utilizando a ponte H L293D para 2 motores, criar funções para facilitar os comandos dos motores, adicionar faróis dianteiros e luz de ré no carrinho, realizar operações de andar pra frente, dar ré, virar para esquerda e virar para direita utilizando comandos Seriais e Ligar e desligar as luzes do carro de um jeito que faça sentido.
 
 
 ---
@@ -40,49 +40,42 @@ Desenvolva um circuito que mostra a temperatura em tempo real no dislpay LCD, ul
     <td>Arduino Uno</td>
     </tr>
     <tr>
-    <td>1</td>
-    <td>Resistor de 1k&Omega;</td>
+    <td>2</td>
+    <td>Resistores de 1k&Omega;</td>
     </tr>
     <tr>
-    <td>3</td>
+    <td>4</td>
     <td>Resistores de 330&Omega;</td>
     </tr>
     <tr>
-    <td>44&nbsp;</td>
+    <td>37&nbsp;</td>
     <td>
     <p>Jumper Macho-Macho</p>
     </td>
     </tr>
-    <td>1&nbsp;</td>
+    <td>2&nbsp;</td>
     <td>Motor DC</td>
     </tr>
     <td>1&nbsp;</td>
-    <td>Potenciometro</td>
+    <td>Buzzer</td>
     </tr>
     </tr>
     <td>1&nbsp;</td>
-    <td>ponte H</td>
+    <td>Ponte H</td>
     </tr>
     </tr>
-    <td>1&nbsp;</td>
+    <td>2&nbsp;</td>
     <td>Led vermelho</td>
     </tr>
     </tr>
-    <td>1&nbsp;</td>
+    <td>2&nbsp;</td>
     <td>Led amarelo</td>
     </tr>
     </tr>
     <td>1&nbsp;</td>
-    <td>Led azul</td>
-    </tr>
-    </tr>
-    <td>1&nbsp;</td>
-    <td>Sensor de temperatura [TMP36]</td>
+    <td>Fotorresitor</td>
     </tr>
     <td>1&nbsp;</td>
-    <td>LCD 16 X 2</td>
-     </tr>
-    <td>2&nbsp;</td>
     <td>Protoboard</td>
     </tbody>
     </table>
@@ -96,9 +89,35 @@ Desenvolva um circuito que mostra a temperatura em tempo real no dislpay LCD, ul
 <h2 id="simulacao-codigo">Simulação e Código</h2>
 
 <div align='center'>
-    <img src="https://media.giphy.com/media/kjXuNlrh5U7NFT9TlO/giphy.gif"></img>
-    <p>Figura 2. Projeto em funcionamento</p>
+    <img src="https://media.giphy.com/media/uMgtwY1HviFcZ2hULH/giphy.gif"></img>
+    <p>Figura 2. Ligar e desligar os faróis do carinho</p>
 </div>
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/SlDUP3HHVXSSpgYVFa/giphy.gif"></img>
+    <p>Figura 3. Carinho indo para frente</p>
+</div>
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/M5ByXWGg6SJoxZtStH/giphy.gif"></img>
+    <p>Figura 4. Carinho indo para trás</p>
+</div>
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/2SfJI8iUrmHvbWHEEg/giphy.gif"></img>
+    <p>Figura 5. Carinho indo para esquerda e direita</p>
+</div>
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/Ey5ccK1pwX7nkHvlRW/giphy.gif"></img>
+    <p>Figura 6. Buzina do carinho</p>
+</div>
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/Abu0ndTxvAsQpQ7V2L/giphy.gif"></img>
+    <p>Figura 7. Parar o que o carinho estiver executando</p>
+</div>
+
 
 O código a seguir realiza as funções designadas para o projeto:
 
