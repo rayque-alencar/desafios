@@ -22,26 +22,35 @@ Todos os desafios dessas aulas foram feitos no tinkercad, então você precisar 
 </h3>
 Uma conta no tinkercad. Acesse esse link para fazer sua conta https://www.tinkercad.com
 
-> Versão de navegador web </br>
-> Versão de algum software específico </br>
-> Etc...
+<div align='center'>
+    <img src="https://media.giphy.com/media/VrRcqYezPssfN534TH/giphy.gif"></img>
+    <p>Figura 1. Como fazer a conta no tinkercad </p>
+</div>
+
+ Agora, se você for usar um software para fazer os projetos físicos, pode usar a IDE do próprio arduino. Link do site https://www.arduino.cc
+ 
+
+<div align='center'>
+    <img src="https://media.giphy.com/media/KDwnkS0q2x1txevghP/giphy.gif"></img>
+    <p>Figura 2. Como baixar a IDE do arduino </p>
+</div>
 
 ---
 
 <h2 id="simulacao">Simulação</h2>
 
-Descreva como utilizar seu app, circuito ou sistema. Explicar o que for necessário para o uso dos elementos do projeto, artimanhas utilizadas no código e afins.
+para fazer a simulação do seu projeto no tinkercad e muito simples, depois de fazer todo o código corretamente e só iniciar a simulação.
 
 <div align='center'>
-    <img src="https://thumbs.gfycat.com/CandidSophisticatedImperatorangel-max-1mb.gif"></img>
-    <p>Figura 3. Projeto em funcionamento</p>
+    <img src="https://media.giphy.com/media/KeqPIitQzkmiCcLoX0/giphy.gif"></img>
+    <p>Figura 3. Iniciando simulação no tinkercad </p>
 </div>
 
 
 <h2 id="contribuicoes">Contribuidores</h2>
 
 Contribuidores do projeto:
-- [Indivíduo 1](https://github.com/mateustoin)
+- [Rayque alencar](https://github.com/rayque-alencar)
 - [Indivíduo 2](https://github.com/mateustoin)
 
 
