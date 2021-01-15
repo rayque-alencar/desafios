@@ -41,7 +41,7 @@ Ultilizando tres led um vermelho, um amarelo e um verde, faça um semáforo.
     </tr>
     <tr>
     <td>3</td>
-    <td>Resistor 330&Omega;</td>
+    <td>Resistores de 330&Omega;</td>
     </tr>
     <tr>
     <td>7&nbsp;</td>
