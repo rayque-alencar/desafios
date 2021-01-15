@@ -50,9 +50,13 @@ para fazer a simulação do seu projeto no tinkercad e muito simples, depois de 
 <h2 id="contribuicoes">Contribuidores</h2>
 
 Contribuidores do projeto:
-- [Rayque alencar](https://github.com/rayque-alencar)
-- [Indivíduo 2](https://github.com/mateustoin)
+- [Rayque Alencar](https://github.com/rayque-alencar)
+- [Guilherme Jacome](https://github.com/GuilhermeJC13)
+- [Joaquim Breno](https://github.com/JoaquimBreno)
+- [Matheus Mendonça](https://github.com/mattheusmendonca)
+- [Renata Mendes](https://github.com/renatamendesc)
+- [Luiz Gusttavo](https://github.com/GusttavoOliveira)
 
 
 ---
----
+
