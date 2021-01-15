@@ -42,7 +42,7 @@ Ultilizando 2 leds faça um programa para que eles pisquem de maneira alternada.
     </tr>
     <tr>
     <td>2</td>
-    <td>Resistor 330&Omega;</td>
+    <td>Resistores de 330&Omega;</td>
     </tr>
     <tr>
     <td>7&nbsp;</td>
