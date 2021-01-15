@@ -15,7 +15,7 @@ Esse repositório é para ajudar/guiar quem está começando a ver as aulas do g
 ---
 
 <h2 id="primeiros-passos">Primeiros Passos</h2>
-Todos os desafios dessas aulas foram feitos no tinkercad, então você precisar ter um conta nele pra pode fazer o seu projeto ou testar os daqui.
+Todos os desafios dessas aulas foram feitos no tinkercad, então você precisa ter uma conta nele pra poder fazer o seu projeto ou testar os daqui.
 
 <h3 id="pre-req">
     <b>Pré-requisitos</b>
@@ -39,7 +39,7 @@ Uma conta no tinkercad. Acesse esse link para fazer sua conta https://www.tinker
 
 <h2 id="simulacao">Simulação</h2>
 
-para fazer a simulação do seu projeto no tinkercad e muito simples, depois de fazer todo o código corretamente e só iniciar a simulação.
+Para fazer a simulação do seu projeto no tinkercad é muito simples, depois de fazer todo o código corretamente é só iniciar a simulação.
 
 <div align='center'>
     <img src="https://media.giphy.com/media/KeqPIitQzkmiCcLoX0/giphy.gif"></img>
